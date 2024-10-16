@@ -22,7 +22,7 @@ const Accordion = () => {
 
 	}
 	return (
-		<div className="flex flex-col gap-1 items-center">
+		<div className="w-full h-[100vh] flex flex-col justify-center items-center gap-1">
 			<button // Toggling between multi select and single select
 				className="w-40 bg-red-400 rounded-md"
 				onClick={() => setIsMulti(!isMutli)}> 
