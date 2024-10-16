@@ -1,6 +1,7 @@
 import Accordion from "./components/Accordion";
 import ProjectSperator from "./components/ProjectSperator";
 import RandomColorGen from "./components/RandomColorGen";
+import StartRating from "./components/StarRating";
 
 const App = () => {
   return (
@@ -9,7 +10,8 @@ const App = () => {
       <ProjectSperator />
       <RandomColorGen />
       <ProjectSperator />
-
+      <StartRating numberOfStars={6}/>
+      <ProjectSperator/>
     </div>
   )
 }

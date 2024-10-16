@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const RandomColorGen = () => {
-	const [color, setColor] = useState("#FFFFFF"); // Color state
+	const [color, setColor] = useState("#000000"); // Color state
 	const [colorCode, setColorCode] = useState("hex"); // Color code type state
 
 	const changeColorCode = (code) => {
@@ -45,7 +45,7 @@ const RandomColorGen = () => {
 			</div>
 			<div className="h-[90vh] flex justify-center items-center">
 				<h1
-					className="font-Montserrat text-[60px] hover:font-semibold transition-all select-none cursor-pointer bg-[#45454588] px-7 py-3 rounded-lg">{color}</h1>
+					className="font-Montserrat text-[60px] text-white hover:font-semibold transition-all select-none cursor-pointer bg-[#45454588] px-7 py-3 rounded-lg">{color}</h1>
 			</div>
 		</div>
 	);
