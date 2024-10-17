@@ -3,6 +3,7 @@ import ImageSlider from "./components/ImageSlider";
 import ProjectSperator from "./components/ProjectSperator";
 import RandomColorGen from "./components/RandomColorGen";
 import StartRating from "./components/StarRating";
+import LoadMore from "./components/LoadMore";
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
       <ProjectSperator/>
       <ImageSlider url={"https://picsum.photos/v2/list?page="} page={20} limit={4}/>
       <ProjectSperator/>
+      <LoadMore />
+      <ProjectSperator />
     </div>
   )
 }

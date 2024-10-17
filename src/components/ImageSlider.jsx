@@ -68,9 +68,9 @@ const ImageSlider = ({ url, page, limit }) => {
 	return (
 		<div className="w-full h-[100vh] flex justify-center items-center">
 
-			<div className="flex">
+			<div className="flex items-center justify-center">
 				<button  // Next image button
-					className="text-3xl font-bold"
+					className="text-3xl font-bold text-sky-400 bg-[#45454588] px-3 py-2 translate-x-5 rounded-md hover:bg-[#454545aa] active:bg-[#454545cc] transition-all"
 					onClick={() => preImage()}>
 					{`<`}
 				</button>
@@ -84,7 +84,7 @@ const ImageSlider = ({ url, page, limit }) => {
 						null
 				}
 				<button // Previous image button
-					className="text-3xl font-bold"
+					className="text-3xl font-bold text-sky-400 bg-[#45454588] px-3 py-2 -translate-x-5 rounded-md hover:bg-[#454545aa] active:bg-[#454545cc] transition-all"
 					onClick={() => nextImage()}>
 					{`>`}
 				</button>
