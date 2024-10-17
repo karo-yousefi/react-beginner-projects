@@ -16,6 +16,8 @@ const accordionData = [
 	},
 ];
 
+
+
 export {
 	accordionData,
 }
