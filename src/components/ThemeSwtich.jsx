@@ -10,7 +10,9 @@ const ThemeSwtich = () => {
 			<button
 				className={`tex-3xl font-Montserrat px-4 py-2 rounded-lg ${theme === "dark" ? "bg-sky-800 text-white" : "bg-red-300 text-black"}`}
 				onClick={() => {setTheme(theme === "dark" ? "light" : "dark")}
-				}>Dark Mode</button>
+				}>{
+					theme === "dark" ? "Light Mode" : "Dark Mode"
+				}</button>
 		</div>
 	)
 }
