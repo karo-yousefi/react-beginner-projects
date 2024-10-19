@@ -7,6 +7,7 @@ import LoadMore from "./components/LoadMore";
 import TreeView from "./components/TreeView";
 import { treeViewData } from "./data/idnex";
 import QRGenrator from "./components/QRGenrator";
+import ThemeSwtich from "./components/ThemeSwtich";
 
 
 const App = () => {
@@ -25,6 +26,8 @@ const App = () => {
       <TreeView data={treeViewData}/>
       <ProjectSperator />
       <QRGenrator />
+      <ProjectSperator />
+      <ThemeSwtich />
     </div>
   )
 }

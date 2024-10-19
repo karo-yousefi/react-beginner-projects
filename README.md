@@ -43,3 +43,11 @@
 ![6-tree-menu](./media/6-tree-menu.gif)
 
 ---	
+
+7. Theme Switch (This not meant to be a dark/light theme component. Just a simple practice for making custom hooks. This component uses local storage to save the user's theme):
+
+![7-theme-swtich](./media/7-theme-swtich.gif)
+
+---
+
+8. 
