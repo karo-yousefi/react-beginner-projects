@@ -17,7 +17,60 @@ const accordionData = [
 ];
 
 
+const treeViewData = [
+	{
+		label: "Home",
+		path: "/",
+		children: [],
+	},
+	{
+		label: "Profile",
+		path: "./profile",
+		children: [
+			{
+				label: "Sign up",
+				path: "./sign-up",
+				children: [
+					{
+						label: "With gamil",
+						path: "",
+						children: [],
+					},
+					{
+						label: "With Facebook",
+						path: "",
+						children: [],
+					}
+				],
+			},
+			{
+				label: "Log in",
+				path: "./log-in",
+				children: [],
+			},
+		],
+	},
+	{
+		label: "Contact",
+		path: "./Contact",
+		children: [
+			{
+				label: "Email",
+				path: "",
+				children: [],
+			},
+			{
+				label: "Phone",
+				path: "",
+				children: [],
+			},
+		],
+	},
+]
+
+
 
 export {
 	accordionData,
+	treeViewData,
 }

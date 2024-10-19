@@ -38,6 +38,8 @@
 
 ---
 
+6. Tree Menu (Getting the needed data and show all the items and their children using recursion):
 
+![6-tree-menu](./media/6-tree-menu.gif)
 
-
+---	

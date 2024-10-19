@@ -4,6 +4,9 @@ import ProjectSperator from "./components/ProjectSperator";
 import RandomColorGen from "./components/RandomColorGen";
 import StartRating from "./components/StarRating";
 import LoadMore from "./components/LoadMore";
+import TreeView from "./components/TreeView";
+import { treeViewData } from "./data/idnex";
+
 
 const App = () => {
   return (
@@ -18,6 +21,7 @@ const App = () => {
       <ProjectSperator/>
       <LoadMore />
       <ProjectSperator />
+      <TreeView data={treeViewData}/>
     </div>
   )
 }
