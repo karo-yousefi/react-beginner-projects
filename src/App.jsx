@@ -6,6 +6,7 @@ import StartRating from "./components/StarRating";
 import LoadMore from "./components/LoadMore";
 import TreeView from "./components/TreeView";
 import { treeViewData } from "./data/idnex";
+import QRGenrator from "./components/QRGenrator";
 
 
 const App = () => {
@@ -22,6 +23,8 @@ const App = () => {
       <LoadMore />
       <ProjectSperator />
       <TreeView data={treeViewData}/>
+      <ProjectSperator />
+      <QRGenrator />
     </div>
   )
 }

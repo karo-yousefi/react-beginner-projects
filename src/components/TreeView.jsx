@@ -37,15 +37,15 @@ const ItemList = ({ item }) => { // Rendering items
 
 	return (
 		<li className="mt-2">
-				<div className="flex gap-4">
+				<div className="flex gap-4 items-center">
 					{
-						item && item.children ? // Ensuring the item is exists before checking if its children is falsy (undefined) or truthy 
-						<span className="cursor-pointer font-Montserrat text-3xl font-bold select-none hover:text-white transition-all" onClick={() => handleExpand(item.label)}>
+						item && item.children && item.children.length > 0 ? // Ensuring the item is exists before checking if its children is falsy (undefined) or truthy 
+						<span className="cursor-pointer font-Montserrat text-[40px] font-semibold select-none hover:text-white transition-all" onClick={() => handleExpand(item.label)}>
 							{
 								displayCurrentChildren[item.label] ? "-" : "+" // Changint the text of the span based on if the item is open or closed (using label as key)
 							}
 						</span>:
-						null // If not item or no children in item do nothing
+						null // If no item or no children in item do nothing
 					}
 					<p className="cursor-pointer font-Montserrat text-2xl select-none hover:font-semibold transition-all">{item.label}</p>
 				</div>
