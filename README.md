@@ -3,7 +3,7 @@
 + All the projects are documented, Feel free to use them while  **learning React**.
 
 
-+ Below I showcase the projects. The focus is not on styling, Just some projects that their **logic** works.
++ Below I showcase the projects. The focus is **not on styling** , Just some projects that their **logic** works.
 
 
 ---
@@ -50,4 +50,16 @@
 
 ---
 
-8. 
+8. Scroll Indicator (A small smiple progress bar that shows how much the user scrolled through the content):
+
+![8-scroll-indicator](./media/8-scroll-indicator.gif)
+
+---
+
+9. Tabs (Simple tab menu, Clicking on each tab reveals its content):
+
+![9-tabs](./media/9-tabs.gif)
+
+---
+
+10. ?
