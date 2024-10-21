@@ -10,6 +10,7 @@ import QRGenrator from "./components/QRGenrator";
 import ThemeSwtich from "./components/ThemeSwtich";
 import ScrollIndicator from "./components/ScrollIndicator";
 import Tabs from "./components/Tabs";
+import { tabsData } from "./data/idnex";
 
 const App = () => {
   return (
@@ -32,7 +33,7 @@ const App = () => {
       <ProjectSperator />
       <ScrollIndicator />
       <ProjectSperator />
-      <Tabs />
+      <Tabs data={tabsData}/>
       <ProjectSperator />
     </div>
   )
