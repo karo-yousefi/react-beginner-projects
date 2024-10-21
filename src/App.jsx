@@ -8,7 +8,8 @@ import TreeView from "./components/TreeView";
 import { treeViewData } from "./data/idnex";
 import QRGenrator from "./components/QRGenrator";
 import ThemeSwtich from "./components/ThemeSwtich";
-
+import ScrollIndicator from "./components/ScrollIndicator";
+import Tabs from "./components/Tabs";
 
 const App = () => {
   return (
@@ -28,6 +29,11 @@ const App = () => {
       <QRGenrator />
       <ProjectSperator />
       <ThemeSwtich />
+      <ProjectSperator />
+      <ScrollIndicator />
+      <ProjectSperator />
+      <Tabs />
+      <ProjectSperator />
     </div>
   )
 }
