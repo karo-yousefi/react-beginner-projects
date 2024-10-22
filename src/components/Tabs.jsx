@@ -11,6 +11,7 @@ const Tabs = ({ data }) => {
 					data.map((tab) => {
 						return (
 								<div
+									key={tab.id}
 									className={`w-28 h-14 flex justify-center items-center rounded-lg cursor-pointer ${activeTab === tab.id ? "font-bold" : ""} transition-all`}
 									style={{ backgroundColor: tab.bgColor }}
 									onClick={() => setActiveTab(tab.id)}> {/* Updating the state to ID of the current tab */}

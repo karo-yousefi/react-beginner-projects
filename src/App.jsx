@@ -11,6 +11,8 @@ import ThemeSwtich from "./components/ThemeSwtich";
 import ScrollIndicator from "./components/ScrollIndicator";
 import Tabs from "./components/Tabs";
 import { tabsData } from "./data/idnex";
+import CustomModal from "./components/CustomModal";
+import GithubProfileFinder from "./components/GithubProfileFinder";
 
 const App = () => {
   return (
@@ -35,6 +37,9 @@ const App = () => {
       <ProjectSperator />
       <Tabs data={tabsData}/>
       <ProjectSperator />
+      <CustomModal />
+      <ProjectSperator />
+      <GithubProfileFinder />
     </div>
   )
 }
