@@ -13,6 +13,7 @@ import Tabs from "./components/Tabs";
 import { tabsData } from "./data/idnex";
 import CustomModal from "./components/CustomModal";
 import GithubProfileFinder from "./components/GithubProfileFinder";
+import SearchAutoCompelete from "./components/SearchAutoCompelete";
 
 const App = () => {
   return (
@@ -40,6 +41,8 @@ const App = () => {
       <CustomModal />
       <ProjectSperator />
       <GithubProfileFinder />
+      <ProjectSperator />
+      <SearchAutoCompelete />
     </div>
   )
 }
