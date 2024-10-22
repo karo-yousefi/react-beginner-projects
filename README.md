@@ -62,4 +62,22 @@
 
 ---
 
-10. ?
+10. Custome Modal:
+
+![10-cusotom-modal](./media/10-custom-modal.gif)
+
+---
+
+11. Github Profile Finder (Searching for user's data on github using github API):
+
+![11-github-profile-finder](./media/11-github-profile-finder.gif)
+
+---
+
+12. Search Auto Complete (A simple auto complete, Getting the data from [dummyjson.com](https://dummyjson.com)):
+
+![12-search-auto-complete](./media/12-search-auto-complete.gif)
+
+---
+
+13. ?
