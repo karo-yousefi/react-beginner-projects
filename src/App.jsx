@@ -14,6 +14,7 @@ import { tabsData } from "./data/idnex";
 import CustomModal from "./components/CustomModal";
 import GithubProfileFinder from "./components/GithubProfileFinder";
 import SearchAutoCompelete from "./components/SearchAutoCompelete";
+import TicTacToe from "./components/TicTacToe";
 
 const App = () => {
   return (
@@ -43,6 +44,9 @@ const App = () => {
       <GithubProfileFinder />
       <ProjectSperator />
       <SearchAutoCompelete />
+      <ProjectSperator />
+      <TicTacToe />
+      <ProjectSperator />
     </div>
   )
 }
