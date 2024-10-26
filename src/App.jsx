@@ -62,7 +62,6 @@ const App = () => {
     </>
   );
   
-
   return (
     <FeatureFlagContext.Provider value={{ active, toggleActive }} className="flex flex-col items-center">
       <FeatureFlag />

@@ -10,7 +10,7 @@ const QRGenerator = () => {
 		<div className="w-full h-[100vh] flex flex-col justify-center items-center gap-4">
 			<input
 				type="text"
-				placeholder="Enter your value"
+				placeholder="Enter anything"
 				className="text-center border-[1px] border-black"
 				onChange={(e) => setInput(e.target.value)} // Updaing the input state as the user changes the input
 				value={input}

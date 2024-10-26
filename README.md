@@ -6,6 +6,9 @@
 + Below I showcase the projects. The focus is **not on styling** , Just some projects that their **logic** works.
 
 
++ I've used TailwindCSS to style this mini projects.
+
+
 ---
 
 1. Accordion Menu (with single select and multi select option):
@@ -88,11 +91,11 @@
 
 14. Tic Tac Toe game:
 
-![14-tic-tac-toe](./media/14-tic-tac-toe)
+![14-tic-tac-toe](./media/14-tic-tac-toe.gif)
 
 ---
 
-15. Feature Flag (This project placed before all the other projects in App.js file, Despite being project #15. This project allows you to enable/disable certain projects (components) on the webpage:
+15. Feature Flag (This project placed before all the other projects in App.js file, Despite being project #15. This project allows you to enable/disable certain projects (components) on the webpage):
 
 ![15-feature-flag](./media/15-feature-flag.gif)
 
