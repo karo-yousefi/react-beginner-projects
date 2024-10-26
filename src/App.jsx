@@ -1,3 +1,5 @@
+import { createContext, useState } from "react";
+
 import Accordion from "./components/Accordion";
 import ImageSlider from "./components/ImageSlider";
 import ProjectSperator from "./components/ProjectSperator";
@@ -6,7 +8,7 @@ import StartRating from "./components/StarRating";
 import LoadMore from "./components/LoadMore";
 import TreeView from "./components/TreeView";
 import { treeViewData } from "./data/idnex";
-import QRGenrator from "./components/QRGenrator";
+import QRGenerator from "./components/QRGenerator";
 import ThemeSwtich from "./components/ThemeSwtich";
 import ScrollIndicator from "./components/ScrollIndicator";
 import Tabs from "./components/Tabs";
@@ -16,38 +18,100 @@ import GithubProfileFinder from "./components/GithubProfileFinder";
 import SearchAutoCompelete from "./components/SearchAutoCompelete";
 import TicTacToe from "./components/TicTacToe";
 
+import FeatureFlag from "./components/FeatureFlag";
+
+
+
+export const FeatureFlagContext = createContext();
+
+
 const App = () => {
+
+  const [active, setActive] = useState({
+		accordion: true,
+		randomColorGen: true,
+		starRating: true,
+    imageSlider: true,
+    loadMore: true,
+		treeView: true,
+    QRGenerator: true,
+    themeSwitch: true,
+    scrollIndicator: true,
+		tabs: true,
+		customModal: true,
+    githubProfileFinder: true,
+    searchAutoCompelete: true,
+		ticTacToe: true,
+	})
+
+  const toggleActive = (component) => {
+		setActive((preActive => ({
+			...preActive,
+			[component]: !preActive[component],
+		})));
+  };
+
   return (
-    <div className="flex flex-col items-center">
-      <Accordion />
+    <FeatureFlagContext.Provider value={{active, toggleActive}} className="flex flex-col items-center">
+      <FeatureFlag />
       <ProjectSperator />
-      <RandomColorGen />
+      {
+        active["accordion"] && <Accordion />
+      }
       <ProjectSperator />
-      <StartRating numberOfStars={6}/>
+      {
+        active["randomColorGen"] && <RandomColorGen />
+      }
+      <ProjectSperator />
+      {
+        active["starRating"] && <StartRating numberOfStars={6}/>
+      }
       <ProjectSperator/>
-      <ImageSlider url={"https://picsum.photos/v2/list?page="} page={20} limit={4}/>
+      {
+        active["imageSlider"] && <ImageSlider url={"https://picsum.photos/v2/list?page="} page={20} limit={4}/>
+      }
       <ProjectSperator/>
-      <LoadMore />
+      {
+        active["loadMore"] && <LoadMore />
+      }
       <ProjectSperator />
-      <TreeView data={treeViewData}/>
+      {
+        active["treeView"] && <TreeView data={treeViewData}/>
+      }
       <ProjectSperator />
-      <QRGenrator />
+      {
+        active["QRGenerator"] && <QRGenerator />
+      }
       <ProjectSperator />
-      <ThemeSwtich />
+      {
+        active["themeSwitch"] && <ThemeSwtich />
+      }
       <ProjectSperator />
-      <ScrollIndicator />
+      {
+        active["scrollIndicator"] && <ScrollIndicator />
+      }
       <ProjectSperator />
-      <Tabs data={tabsData}/>
+      {
+        active["tabs"] && <Tabs data={tabsData}/>
+      }
       <ProjectSperator />
-      <CustomModal />
+      {
+        active["customModal"] && <CustomModal />
+      }
       <ProjectSperator />
-      <GithubProfileFinder />
+      {
+        active["githubProfileFinder"] && <GithubProfileFinder />
+      }
       <ProjectSperator />
-      <SearchAutoCompelete />
+      {
+        active["searchAutoCompelete"] && <SearchAutoCompelete />
+      }
       <ProjectSperator />
-      <TicTacToe />
+      {
+        active["ticTacToe"] && <TicTacToe />
+      }
       <ProjectSperator />
-    </div>
+    </FeatureFlagContext.Provider>
   )
 }
 

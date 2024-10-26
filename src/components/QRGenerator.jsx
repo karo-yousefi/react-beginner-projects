@@ -1,7 +1,7 @@
 import { useState } from "react";
 import QRCode from "react-qr-code";
 
-const QRGenrator = () => {
+const QRGenerator = () => {
 
 	const [input, setInput] = useState(""); // The value of the input element will be saved in this state
 	const [QRInput, setQRInput] = useState(""); // QRCode component gets its value from this
@@ -36,4 +36,4 @@ const QRGenrator = () => {
 	)
 }
 
-export default QRGenrator
+export default QRGenerator

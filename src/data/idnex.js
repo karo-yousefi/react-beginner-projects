@@ -97,7 +97,8 @@ const tabsData = [
 			text: "A utility-first CSS framework that allows you to style web pages quickly by applying pre-defined classes directly in your HTML, offering flexibility and speed in design."
 		},
 	},
-]
+];
+
 
 
 export {
