@@ -1,5 +1,7 @@
-import { createContext, useState } from "react";
+// Needed packages: 
+import { createContext, useState } from "react"; 
 
+// Components: 
 import Accordion from "./components/Accordion";
 import ImageSlider from "./components/ImageSlider";
 import ProjectSperator from "./components/ProjectSperator";
@@ -7,7 +9,6 @@ import RandomColorGen from "./components/RandomColorGen";
 import StartRating from "./components/StarRating";
 import LoadMore from "./components/LoadMore";
 import TreeView from "./components/TreeView";
-import { treeViewData } from "./data/idnex";
 import QRGenerator from "./components/QRGenerator";
 import ThemeSwtich from "./components/ThemeSwtich";
 import ScrollIndicator from "./components/ScrollIndicator";
@@ -17,8 +18,10 @@ import CustomModal from "./components/CustomModal";
 import GithubProfileFinder from "./components/GithubProfileFinder";
 import SearchAutoCompelete from "./components/SearchAutoCompelete";
 import TicTacToe from "./components/TicTacToe";
-
 import FeatureFlag from "./components/FeatureFlag";
+
+// Needed info to pass in some of the components
+import { treeViewData } from "./data/idnex";
 
 
 
@@ -27,7 +30,7 @@ export const FeatureFlagContext = createContext();
 
 const App = () => {
 
-  const [active, setActive] = useState({
+  const [active, setActive] = useState({ // true: the components will be shown, false: The component will not be shown
 		accordion: true,
 		randomColorGen: true,
 		starRating: true,
@@ -51,68 +54,35 @@ const App = () => {
 		})));
   };
 
+
+  const renderWithSeparator = (Component) => ( // A simple function that renders the components with a sinmple spearator component to aviod repetitive code
+    <>
+      {Component}
+      <ProjectSperator />
+    </>
+  );
+  
+
   return (
-    <FeatureFlagContext.Provider value={{active, toggleActive}} className="flex flex-col items-center">
+    <FeatureFlagContext.Provider value={{ active, toggleActive }} className="flex flex-col items-center">
       <FeatureFlag />
       <ProjectSperator />
-      {
-        active["accordion"] && <Accordion />
-      }
-      <ProjectSperator />
-      {
-        active["randomColorGen"] && <RandomColorGen />
-      }
-      <ProjectSperator />
-      {
-        active["starRating"] && <StartRating numberOfStars={6}/>
-      }
-      <ProjectSperator/>
-      {
-        active["imageSlider"] && <ImageSlider url={"https://picsum.photos/v2/list?page="} page={20} limit={4}/>
-      }
-      <ProjectSperator/>
-      {
-        active["loadMore"] && <LoadMore />
-      }
-      <ProjectSperator />
-      {
-        active["treeView"] && <TreeView data={treeViewData}/>
-      }
-      <ProjectSperator />
-      {
-        active["QRGenerator"] && <QRGenerator />
-      }
-      <ProjectSperator />
-      {
-        active["themeSwitch"] && <ThemeSwtich />
-      }
-      <ProjectSperator />
-      {
-        active["scrollIndicator"] && <ScrollIndicator />
-      }
-      <ProjectSperator />
-      {
-        active["tabs"] && <Tabs data={tabsData}/>
-      }
-      <ProjectSperator />
-      {
-        active["customModal"] && <CustomModal />
-      }
-      <ProjectSperator />
-      {
-        active["githubProfileFinder"] && <GithubProfileFinder />
-      }
-      <ProjectSperator />
-      {
-        active["searchAutoCompelete"] && <SearchAutoCompelete />
-      }
-      <ProjectSperator />
-      {
-        active["ticTacToe"] && <TicTacToe />
-      }
-      <ProjectSperator />
+        {active["accordion"] && renderWithSeparator(<Accordion />)}
+        {active["randomColorGen"] && renderWithSeparator(<RandomColorGen />)}
+        {active["starRating"] && renderWithSeparator(<StartRating numberOfStars={6} />)}
+        {active["imageSlider"] && renderWithSeparator(<ImageSlider url={"https://picsum.photos/v2/list?page="} page={20} limit={4} />)}
+        {active["loadMore"] && renderWithSeparator(<LoadMore />)}
+        {active["treeView"] && renderWithSeparator(<TreeView data={treeViewData} />)}
+        {active["QRGenerator"] && renderWithSeparator(<QRGenerator />)}
+        {active["themeSwitch"] && renderWithSeparator(<ThemeSwtich />)}
+        {active["scrollIndicator"] && renderWithSeparator(<ScrollIndicator />)}
+        {active["tabs"] && renderWithSeparator(<Tabs data={tabsData} />)}
+        {active["customModal"] && renderWithSeparator(<CustomModal />)}
+        {active["githubProfileFinder"] && renderWithSeparator(<GithubProfileFinder />)}
+        {active["searchAutoCompelete"] && renderWithSeparator(<SearchAutoCompelete />)}
+        {active["ticTacToe"] && renderWithSeparator(<TicTacToe />)}
     </FeatureFlagContext.Provider>
-  )
+  );  
 }
 
 export default App;

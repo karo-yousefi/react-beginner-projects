@@ -87,6 +87,7 @@
 ---
 
 14. Tic Tac Toe game:
+
 ![14-tic-tac-toe](./media/14-tic-tac-toe)
 
 ---
