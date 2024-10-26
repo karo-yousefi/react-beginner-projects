@@ -42,42 +42,61 @@
 
 ![6-tree-menu](./media/6-tree-menu.gif)
 
----	
+---
 
-7. Theme Switch (This not meant to be a dark/light theme component. Just a simple practice for making custom hooks. This component uses local storage to save the user's theme):
+7. QR Generator: (The only project that uses a 3rd party npm package)
 
-![7-theme-swtich](./media/7-theme-swtich.gif)
+![7-qr-generator](./media/7-qr-genertor.gif)
 
 ---
 
-8. Scroll Indicator (A small smiple progress bar that shows how much the user scrolled through the content):
+8. Theme Switch (This not meant to be a dark/light theme component. Just a simple practice for making custom hooks. This component uses local storage to save the user's theme):
 
-![8-scroll-indicator](./media/8-scroll-indicator.gif)
-
----
-
-9. Tabs (Simple tab menu, Clicking on each tab reveals its content):
-
-![9-tabs](./media/9-tabs.gif)
+![8-theme-swtich](./media/8-theme-swtich.gif)
 
 ---
 
-10. Custome Modal:
+9. Scroll Indicator (A small smiple progress bar that shows how much the user scrolled through the content):
 
-![10-cusotom-modal](./media/10-custom-modal.gif)
-
----
-
-11. Github Profile Finder (Searching for user's data on github using github API):
-
-![11-github-profile-finder](./media/11-github-profile-finder.gif)
+![9-scroll-indicator](./media/9-scroll-indicator.gif)
 
 ---
 
-12. Search Auto Complete (A simple auto complete, Getting the data from [dummyjson.com](https://dummyjson.com)):
+10. Tabs (Simple tab menu, Clicking on each tab reveals its content):
 
-![12-search-auto-complete](./media/12-search-auto-complete.gif)
+![10-tabs](./media/10-tabs.gif)
 
 ---
 
-13. ?
+11. Custome Modal:
+
+![11-cusotom-modal](./media/11-custom-modal.gif)
+
+---
+
+12. Github Profile Finder (Searching for user's data on github using github API):
+
+![12-github-profile-finder](./media/12-github-profile-finder.gif)
+
+---
+
+13. Search Auto Complete (A simple auto complete, Getting the data from [dummyjson.com](https://dummyjson.com)):
+
+![13-search-auto-complete](./media/13-search-auto-complete.gif)
+
+---
+
+14. Tic Tac Toe game:
+![14-tic-tac-toe](./media/14-tic-tac-toe)
+
+---
+
+15. Feature Flag (This project placed before all the other projects in App.js file, Despite being project #15. This project allows you to enable/disable certain projects (components) on the webpage:
+
+![15-feature-flag](./media/15-feature-flag.gif)
+
+---
+
+16. ?
+
+---
