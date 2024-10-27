@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useLayoutEffect, useRef, useState } from "react"
 
 const CustomHooks = () => {
 
@@ -7,7 +7,7 @@ const CustomHooks = () => {
 
 	return (
 		<div className="w-full flex flex-col justify-center items-center gap-10 my-10">
-			<h1 className="text-3xl font-bold">Testing custom fetch hook:</h1>
+			<h1 className="text-3xl font-semibold font-Montserrat">Testing 1st custom hook: useFetch</h1>
 			{
 				error && <div className="text-red-600 text-2xl font-semibold">{`Error ${error}`}</div>
 			}
@@ -23,7 +23,11 @@ const CustomHooks = () => {
 					})
 				}
 			</div>
+			<h1 className="text-3xl font-semibold font-Montserrat">Testing 2nd custom hook: useOnClickOutside</h1>
 			<OnClickContentContainer />
+
+			<h1 className="text-3xl font-semibold font-Montserrat">Testing 3rd custom hook: useWindowResize</h1>
+			<WindowResizeComponent />
 		</div>
 	)
 }
@@ -123,4 +127,45 @@ const OnClickContentContainer = () => {
 			}
 		</div>
 	)
+}
+
+// ================================
+
+// Custom window resize hook
+
+const WindowResizeComponent = () => {
+
+	const { width, height } = useWindowResize();
+
+	return (
+		<div className="w-full flex flex-col justify-center items-center">
+			<p>Width: {width}</p>
+			<p>Height: {height}</p>
+		</div>
+	)
+}
+
+
+// The custom hook
+const useWindowResize = () => {
+	const [windowSize, setWindowSize] = useState({width: 0, height: 0,});
+
+	const handleResize = () => {
+		setWindowSize({
+			width: window.innerWidth,
+			height: window.innerHeight,
+		});
+	};
+
+	useLayoutEffect(() => { // useEffect: loads after all the elements in the DOM loaded, useLayoutEffect: will call before
+		handleResize();
+
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		}
+	}, []);
+
+	return windowSize;
 }
