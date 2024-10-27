@@ -19,6 +19,7 @@ import GithubProfileFinder from "./components/GithubProfileFinder";
 import SearchAutoCompelete from "./components/SearchAutoCompelete";
 import TicTacToe from "./components/TicTacToe";
 import FeatureFlag from "./components/FeatureFlag";
+import CustomHooks from "./components/CustomHooks";
 
 // Needed info to pass in some of the components
 import { treeViewData } from "./data/idnex";
@@ -45,6 +46,7 @@ const App = () => {
     githubProfileFinder: true,
     searchAutoCompelete: true,
 		ticTacToe: true,
+    customHooks: true,
 	})
 
   const toggleActive = (component) => {
@@ -80,6 +82,7 @@ const App = () => {
         {active["githubProfileFinder"] && renderWithSeparator(<GithubProfileFinder />)}
         {active["searchAutoCompelete"] && renderWithSeparator(<SearchAutoCompelete />)}
         {active["ticTacToe"] && renderWithSeparator(<TicTacToe />)}
+        {active["customHooks"] && renderWithSeparator(<CustomHooks />)}
     </FeatureFlagContext.Provider>
   );  
 }

@@ -17,7 +17,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="accordion"
+					htmlFor="accordion"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Accordion Project</label>
 			</div>
 
@@ -30,7 +30,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="randomColorGen"
+					htmlFor="randomColorGen"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Random Color Gen Project</label>
 			</div>
 
@@ -43,7 +43,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="starRating"
+					htmlFor="starRating"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Star Rating Project</label>
 			</div>
 
@@ -56,7 +56,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="imageSlider"
+					htmlFor="imageSlider"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Image Slider Project</label>
 			</div>
 
@@ -69,7 +69,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="loadMore"
+					htmlFor="loadMore"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Load More Project</label>
 			</div>
 
@@ -82,7 +82,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="treeView"
+					htmlFor="treeView"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Tree View Project</label>
 			</div>
 
@@ -95,7 +95,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="QRGenerator"
+					htmlFor="QRGenerator"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">QR Generator Project</label>
 			</div>
 
@@ -108,7 +108,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="themeSwitch"
+					htmlFor="themeSwitch"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Theme Switch Project</label>
 			</div>
 
@@ -121,7 +121,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="scrollIndicator"
+					htmlFor="scrollIndicator"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Scroll Indicator Project</label>
 			</div>
 
@@ -134,7 +134,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="tabs"
+					htmlFor="tabs"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Tabs Project</label>
 			</div>
 
@@ -147,7 +147,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="customModal"
+					htmlFor="customModal"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Custom Modal Project</label>
 			</div>
 
@@ -160,7 +160,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="githubProfileFinder"
+					htmlFor="githubProfileFinder"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Github Profile Finder Project</label>
 			</div>
 
@@ -173,7 +173,7 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="searchAutoCompelete"
+					htmlFor="searchAutoCompelete"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Search Auto Compelete Project</label>
 			</div>
 
@@ -186,8 +186,21 @@ const FeatureFlag = () => {
 					className="cursor-pointer"
 					/>
 				<label
-					for="ticTacToe"
+					htmlFor="ticTacToe"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Tic Tac Toe Project</label>
+			</div>
+
+			<div>
+				<input
+					type="checkbox"
+					checked={active["customHooks"]}
+					id="customHooks"
+					onChange={() => toggleActive("customHooks")}
+					className="cursor-pointer"
+					/>
+				<label
+					htmlFor="customHooks"
+					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Custom Hooks Project</label>
 			</div>
 
 		</div>
