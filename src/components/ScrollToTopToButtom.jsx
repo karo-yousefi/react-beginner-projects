@@ -10,9 +10,12 @@ const ScrollToTopToButtom = () => {
 	const bottomButtonRef = useRef(null); // The page scrolls here when the user presses down button
 
 
+
+	// Note: If we wanted to use this component in a real project and we wanted to move to the actul top and bottom of the page (insteaf of just this component), 
+	// We could use window.scrollTo({ top: 0, left: 0. behavior: "smooth"}). But here we are moving to the position of a certain element
 	const handleMoveDown = () => {
 		if (bottomButtonRef.current) {
-			bottomButtonRef.current.scrollIntoView({ behavior: "smooth" });
+			bottomButtonRef.current.scrollIntoView({ behavior: "smooth" }); 
 		}
 	}
 

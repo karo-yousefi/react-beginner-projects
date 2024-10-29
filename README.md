@@ -101,6 +101,16 @@
 
 ---
 
-16. ?
+16. 3 Custom Hooks (1. useFetch() : fetching data from API / 2. useOnClickOutside() : By clicking outside of a component it, the component will be closed (modal) / 3. useWindowResize() : Updates a state when the window size changes (useful for designing responsive layouts)
+
+![16-custom-hooks](./media/16-custom-hooks.gif)
 
 ---
+
+17. Scroll To Top / Bottom:
+
+![17-scroll-to-top-bottom](./media/17-scroll-to-top-bottom.gif)
+
+---
+
+18. ?
