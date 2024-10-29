@@ -202,6 +202,19 @@ const FeatureFlag = () => {
 					htmlFor="customHooks"
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Custom Hooks Project</label>
 			</div>
+			
+			<div>
+				<input
+					type="checkbox"
+					checked={active["scrollToTopToButtom"]}
+					id="scrollToTopToButtom"
+					onChange={() => toggleActive("scrollToTopToButtom")}
+					className="cursor-pointer"
+					/>
+				<label
+					htmlFor="scrollToTopToButtom"
+					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Scroll To Top / Buttom Project</label>
+			</div>
 
 		</div>
 	)

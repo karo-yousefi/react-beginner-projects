@@ -20,6 +20,7 @@ import SearchAutoCompelete from "./components/SearchAutoCompelete";
 import TicTacToe from "./components/TicTacToe";
 import FeatureFlag from "./components/FeatureFlag";
 import CustomHooks from "./components/CustomHooks";
+import ScrollToTopToButtom from "./components/ScrollToTopToButtom";
 
 // Needed info to pass in some of the components
 import { treeViewData } from "./data/idnex";
@@ -47,6 +48,7 @@ const App = () => {
     searchAutoCompelete: true,
 		ticTacToe: true,
     customHooks: true,
+    scrollToTopToButtom: true,
 	})
 
   const toggleActive = (component) => {
@@ -83,6 +85,7 @@ const App = () => {
         {active["searchAutoCompelete"] && renderWithSeparator(<SearchAutoCompelete />)}
         {active["ticTacToe"] && renderWithSeparator(<TicTacToe />)}
         {active["customHooks"] && renderWithSeparator(<CustomHooks />)}
+        {active["scrollToTopToButtom"] && renderWithSeparator(<ScrollToTopToButtom />)}
     </FeatureFlagContext.Provider>
   );  
 }
