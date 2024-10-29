@@ -103,7 +103,7 @@ const useOnClickOutside = ({ ref, handler }) => { // ref is a reference to the t
 	}, [handler])
 }
 
-// Just a component to use this along side the custom fetch hook (In the same file)
+// Just a component to test the hook along side the other hooks
 const OnClickContentContainer = () => {
 	const contentRef = useRef();
 	const [show, setShow] = useState(false);
@@ -133,6 +133,8 @@ const OnClickContentContainer = () => {
 
 // Custom window resize hook
 
+
+// Just a component to test the hook along side the other hooks
 const WindowResizeComponent = () => {
 
 	const { width, height } = useWindowResize();
