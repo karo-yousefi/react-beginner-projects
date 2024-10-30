@@ -21,6 +21,7 @@ import TicTacToe from "./components/TicTacToe";
 import FeatureFlag from "./components/FeatureFlag";
 import CustomHooks from "./components/CustomHooks";
 import ScrollToTopToButtom from "./components/ScrollToTopToButtom";
+import WeatherApp from "./components/WeatherApp";
 
 // Needed info to pass in some of the components
 import { treeViewData } from "./data/idnex";
@@ -49,6 +50,7 @@ const App = () => {
 		ticTacToe: true,
     customHooks: true,
     scrollToTopToButtom: true,
+    weatherApp: true,
 	})
 
   const toggleActive = (component) => {
@@ -86,6 +88,7 @@ const App = () => {
         {active["ticTacToe"] && renderWithSeparator(<TicTacToe />)}
         {active["customHooks"] && renderWithSeparator(<CustomHooks />)}
         {active["scrollToTopToButtom"] && renderWithSeparator(<ScrollToTopToButtom />)}
+        {active["weatherApp"] && renderWithSeparator(<WeatherApp />)}
     </FeatureFlagContext.Provider>
   );  
 }

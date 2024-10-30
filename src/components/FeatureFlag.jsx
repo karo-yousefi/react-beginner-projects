@@ -216,6 +216,19 @@ const FeatureFlag = () => {
 					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Scroll To Top / Buttom Project</label>
 			</div>
 
+			<div>
+				<input
+					type="checkbox"
+					checked={active["weatherApp"]}
+					id="weatherApp"
+					onChange={() => toggleActive("weatherApp")}
+					className="cursor-pointer"
+					/>
+				<label
+					htmlFor="weatherApp"
+					className="m-2 text-xl font-Montserrat select-none cursor-pointer">Wather App Project</label>
+			</div>
+
 		</div>
 	)
 }
