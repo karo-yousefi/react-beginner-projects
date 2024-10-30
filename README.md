@@ -113,4 +113,10 @@
 
 ---
 
-18. ?
+18. A simple weather app (Getting the data from [open weather](https://openweathermap.org/) API):
+
+![18-weather-app](./media/18-weather-app.gif)
+
+---
+
+19. ?
